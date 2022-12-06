@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="icon" href="../images/relaxolotl.png" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../app.js"></script>
+</head>
+
+<body>
+  <div class="side-nav">
+    <div class="main-nav">
+      <div class="logo">
+        <img src="../images/relaxolotl.png" />
+      </div>
+      <div class="menu-icon-wrapper">
+        <img class="menu-icon" src="img/menu.png" onclick="expandMenu()" />
+        <img class="exit-icon" src="img/close.png" onclick="collapseMenu()" />
+      </div>
+    </div>
+
+    <a href="../index.html" onclick="expandMenu()">Home</a>
+    <a href="lego_store.html" onclick="expandMenu()">Lego Store</a>
+    <a href="yokai_express.html" onclick="expandMenu()">Yo-Kai Express</a>
+    <a href="arxiv.html" onclick="expandMenu()">Redesign ArXiv</a>
+    <a href="discz.html" onclick="expandMenu()">Redesign Discz</a>
+  </div>
+
+  <div class="main">
+    <div class="header center_text">
+      <h1>Redesigning ArXiv website</h1>
+      <h3>Redesign a website using design principles</h3>
+    </div>
+
+    <div class="section">
+      <div class="content">
+        <div class="content_title">
+          <h1>Overview</h1>
+        </div>
+        <div class="overview">
+          <div class="overview_box">
+            <h2>My role</h2>
+            <p>UI/UX Developer</p>
+          </div>
+          <div class="overview_box">
+            <h2>Timeline</h2>
+            <p>Oct. 4 - Oct. 18, 2022</p>
+          </div>
+          <div class="overview_box">
+            <h2>Team</h2>
+            <p>Solo</p>
+          </div>
+          <div class="overview_box">
+            <h2>Tools</h2>
+            <p>HTML, CSS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="content">
+        <div class="content_title">
+          <h1>Problem</h1>
+        </div>
+        <h1 class="subtitle">Context</h1>
+        <p>The goal of this assignment to practice the workflow of redesigning a simple website. I analyzed and
+          identified flaws in an existing interface, create low-fidelity and high-fidelity prototypes for various screen
+          sizes, and build a responsive website based on those prototypes.
+        </p>
+        <h1 class="subtitle">Identifying Usability Problems</h1>
+        <p>I analyzed the usability of the web page using design criteria including usability (e.g., including
+          efficiency), learnability, and memorability. In addition utilizing the three usability guidelines to analyze
+          the website, I also used WebAIM WAVE to detect possible accessibility problems.</p>
+      </div>
+
+    </div>
+
+    <div class="section">
+      <div class="content">
+        <div class="content_title">
+          <h1>Research</h1>
+        </div>
+        <p>I chose the arXiv website because it is a commonly used website where a lot of researchers use it to post
+          both pre-published and published papers. Because researchers are notorious for being utilitarian, the design
+          and layout of this website lacks a good user interface. Futhermore, this design is the original design that
+          was used in 1980s. Thus, it needs a good makeover. Below is an images of the WAVE report.
+        </p>
+        <div class="wave_report">
+          <img src="../images/wave_report.png">
+        </div>
+        <h1 class="subtitle">Accessibility</h1>
+        <div class="step-text">
+          <ul>
+            <li>There are 3 errors, which consist of an empty link and 2 broken ARIA items. The fact that a link is
+              empty may be misleading and a broken ARIA item prevents web applications from being accessible to people
+              with disabilities. I would have never known of these errors if I did not use WAVE. </li>
+            <li>There are 3 alerts: 1) skipped heading level, 2) a redundant link and a 3) noscript element. These
+              alerts do not impact the user in any major way since they do not alter the way the user interacts with the
+              interface.</li>
+            <li>There are 35 structural elements and 9 features which make for an interesting, yet simple web interface.
+              It has a decent complexity as well as enough simplicity to make the user understand what is going on.</li>
+            <li>There are 244 ARIAs on this single page, 238 of which are ARIA labels. These 238 labels are all
+              displayed to a user all at once. Thus, it can be overwhelming to the user and lead to bad accessibility.
+            </li>
+            <li>There are no contrast errors so the website uses a great color scheme and all the font sizes are
+              accessible. </li>
+            <li>No way to have search results show up based on preference (date, author, number of times cited, etc.)
+            </li>
+            <li>No quick way to gather information from results (ie. if you only want to see how many related papers
+              there are, you have to step through severl pages to get there, no quick access button)</li>
+            <li>Hard to know which filters someone is using</li>
+            <li>Lots of text overwhelming the user all at once</li>
+          </ul>
+        </div>
+        <h1 class="subtitle">Problems</h1>
+        <ul class="step-text">
+          <li>Usability</li>
+          <ul>
+            <li>Scientific papers are presented in a traditional hierarchy</li>
+            <li>Have to step through several pages to reach the papers you want (topic → subtopic → year → month →
+              papers)</li>
+            <li>Lot of pages to sift through before landing on your desired search</li>
+            <li>Contains a search button hidden in the upper right hand size (very small)</li>
+            <li>Search button has ablity to serach with various subcategories</li>
+            <li>Has full directory stack so you can trace back your search</li>
+            <li>Main display presented you with every topic and subtopic (overwhelming)</li>
+          </ul>
+          <li>Learnability</li>
+          <ul>
+            <li>Easy transferability of knowledge from searching through folders from a computer</li>
+            <li>Easy ability to know how to search and build a conceptual model, but difficult execute to find a
+              specific article because there are a lot of filter steps</li>
+            <li>Low learning curve, hard to master</li>
+          </ul>
+          <li>Memorability</li>
+          <ul>
+            <li>Three distint colors: maroon red, black and white</li>
+            <li>Confusing name (good that it gets people to recognize that it hard to pronounce, but bad that no one
+              knows how to stay the website name) </li>
+            <li>Not intuitive that the X is chi arXiv pronounced archive </li>
+            <li>Topics laid out in a list are all hyperlinks to another page</li>
+            <li>Nothing outstanding other than the large red banner on the top and then white page full of hyperlinks
+            </li>
+            <li>Memorable title logo (yellow smilly face with a cross on a green background)</li>
+            <li>Basic 1980s website design with minimal frills</li>
+          </ul>
+          <li>Conceptual model
+            <ul>
+              <li>Viewed as a database to look up scientific papers</li>
+              <li>The homepage suggests that the best way to look up papers is to have a topic in mind and a time frame
+                of papers you want to search through
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="content">
+        <div class="content_title">
+          <h1>Visual Redesign</h1>
+        </div>
+        <h1 class="subtitle">Lofi designs</h1>
+        <p>For my lofi designs, I decided to entirely rework the website. Instead of having a bunch of hyperlinks that
+          you have to step through, there is now a search bar and filter that allows a user to get more refined results.
+          In this way, the website is more oriented to a query search as opposed to a catalog search. When in tablet or
+          phone sizes, the website squishes the filtered search into an icon at the top right.</p>
+        <div class="lo_fi_img">
+          <img src="../images/desktop.png" alt="">
+        </div>
+        <div class="lo_fi_img">
+          <img src="../images/ipad.png" alt="">
+        </div>
+        <div class="lo_fi_img">
+          <img src="../images/iphone.png" alt="">
+        </div>
+        <h1 class="subtitle">Visual Design Style Guide</h1>
+        <p>For my visual design style guide, I used the website's original colors of white, black and red so that people
+          can recoginze that this is the same website. I chose these colors because they contrasted eachother very well:
+          the black and the white with a pop of red color. I also made two types of search results depending on which
+          device someone is using. I used icons when the device is small because I wanted to minimalize the amount of
+          text.
+        </p>
+        <div class="lo_fi_img">
+          <img src="../images/style_guide.png" alt="">
+        </div>
+        <h1 class="subtitle">High-Fidelity Prototyping</h1>
+        <p>For my hifi designs, I refined my lofi designs with my style guide. For both the tablet and phone view, there
+          are two states: one without the filter and one with the filter.
+        <div class="lo_fi_img">
+          <img src="../images/hifi_1.png" alt="">
+        </div>
+        <div class="lo_fi_img">
+          <img src="../images/hifi_2.png" alt="">
+        </div>
+        <div class="lo_fi_img">
+          <img src="../images/hifi_3.png" alt="">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section">
+      <div class="content">
+        <div class="content_title">
+          <h1>Conclusion</h1>
+        </div>
+        <p>Through this project, I learned how creating an accessible and dynamic website is both challenging and
+          rewarding. A website should be able to help the user navigate to their desired goal without too much confusion
+          or excessive clicking around. As seen here, I restructured the arXiv website to be less folder oriented and
+          more search oriented. Finally, I also made the website viable in different screen settings, allowing people
+          with different devices to easily access the same information. </p>
+      </div>
+    </div>
+
+    <div class="section">
+      <a href="https://tiredaxolotl521.github.io/redesign/">
+        <button class="page_button">Go to arXiv redesign→</button>
+      </a>
+    </div>
+
+  </div>
+</body>
+
+</html>

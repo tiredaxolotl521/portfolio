@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="images/relaxolotl.png" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+  <div class="side-nav">
+    <div class="main-nav">
+      <div class="logo">
+        <img src="images/relaxolotl.png" />
+      </div>
+      <div class="menu-icon-wrapper">
+        <img class="menu-icon" src="img/menu.png" onclick="expandMenu()" />
+        <img class="exit-icon" src="img/close.png" onclick="collapseMenu()" />
+      </div>
+    </div>
+
+    <a href="index.html" onclick="expandMenu()">Home</a>
+    <a href="sub_pages/lego_store.html" onclick="expandMenu()">Lego Store</a>
+    <a href="sub_pages/yokai_express.html" onclick="expandMenu()">Yo-Kai Express</a>
+    <a href="sub_pages/arxiv.html" onclick="expandMenu()">Redesign ArXiv</a>
+    <a href="sub_pages/discz.html" onclick="expandMenu()">Redesign Discz</a>
+  </div>
+
+  <div class="main">
+    <div class="header center_text">
+      <h1>Welcome to my portfolio</h1>
+    </div>
+
+    <div class="section">
+      <div class="content">
+        <div class="profile_img">
+          <img src="images/profile.png">
+        </div>
+        <h1 class="subtitle">About Me</h1>
+        <p> <b>tiredaxolotl521</b> is my UI/UX Designer alter ego who thrives in "why" and "how" of design. They strive
+          to make amazing products with flexibility, speed, and quality. This portfolio showcases their creative design
+          and technical skills. To learn more about the projects, <b>clicking</b> on the projects below or use to the
+          left hand nav bar to navigate to a specified project. You can also view all projects on GitHub by clicking on
+          the button below.
+        </p>
+        <a href="https://github.com/tiredaxolotl521">
+          <button class="git_button"><span>GitHub </span></button>
+        </a>
+      </div>
+    </div>
+
+    <div id="lego_store" class="section">
+      <div class="content">
+        <a href="sub_pages/lego_store.html">
+          <button class="clear_button">
+            <div class="flex">
+              <div class="left">
+                <img src="images/lego_store.jpg">
+              </div>
+              <div class="right">
+                <h1 class="subtitle">Lego Store</h1>
+                <p><b>Description:</b> Developed an interactive interface that implemented interface components that
+                  were tied
+                  to an internal data state. This project was fully developed using react components by creating a
+                  list-based
+                  interface. It acted as an interface for users to select lego items out of a database and then
+                  aggregates them.
+                  In this application, you can sort and add lego items to your cart.
+                </p>
+                <p><b>Skills:</b> React, HTML, CSS, Javascript</p>
+              </div>
+            </div>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div id="yokai_ramen" class="section">
+      <div class="content">
+        <a href="sub_pages/yokai_express.html">
+          <button class="clear_button">
+            <div class="flex">
+              <div class="left">
+                <img src="images/yo_kai.jpg">
+              </div>
+              <div class="right">
+                <h1 class="subtitle">Yokai Express</h1>
+                <p><b>Description:</b> Selected a physical interface to observe real users interacting with an
+                  interface, record user interactions and interview these individuals about their experiences. Created
+                  and developed personas based on observed users to illustrate different storyboards. The interface I
+                  choose to observe was the Yo-kai Express machine in the RISD portfolio dinning hall.
+                </p>
+                <p><b>Skills:</b> HTML, CSS</p>
+              </div>
+            </div>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div id="arxiv" class="section">
+      <div class="content">
+        <a href="sub_pages/arxiv.html">
+          <button class="clear_button">
+            <div class="flex">
+              <div class="left">
+                <img src="images/arxiv.png">
+              </div>
+              <div class="right">
+                <h1 class="subtitle">Redesign ArXiv</h1>
+                <p><b>Description:</b> Redesigned the workflow of a simple website. For this project, I chose to
+                  redesign the arXiv website. Through this project, I developed skills necessary to analyze and identify
+                  flaws in an existing interface, create low-fidelity and high-fidelity prototypes for various screen
+                  sizes, and build a responsive website.
+                </p>
+                <p><b>Skills:</b>HTML, CSS, responsive web design, hi-fi/lo-fi prototypes</p>
+              </div>
+            </div>
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div id="discz" class="section">
+      <div class="content">
+        <a href="sub_pages/discz.html">
+          <button class="clear_button">
+            <div class="flex">
+              <div class="left">
+                <img src="images/discz.png">
+              </div>
+              <div class="right">
+                <h1 class="subtitle">Redesign Discz</h1>
+                <p><b>Description:</b> I worked in a group of 4 where we designed an interactive interface for an
+                  emerging startup. Our group went through the full process of mocking up a solution to the startup's
+                  concept. We choose to redesign Discz, an app that helps you find your next favorite artists and songs.
+                  It's main functionality is the ability to build playlists at the swipe of a finger and find new music
+                  via custom recommendations catered to your taste. The project was split into four parts to exemplify
+                  an iterative design process flow: (1) sketching ideas of the interface, (2) creating an interactive,
+                  high-fidelity prototype, (3) conducting user testing on a final, revised prototype, and (4) contacting
+                  the startup.</p>
+                <p><b>Skills:</b> HTML, CSS, Figma, iterative design, hi-fi/lo-fi mockups</p>
+              </div>
+            </div>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
