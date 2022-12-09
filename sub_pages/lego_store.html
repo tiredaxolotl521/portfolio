@@ -29,10 +29,18 @@
     </div>
 
     <div class="main">
-        <div class="header center_text">
-            <h1>Lego Store</h1>
-            <h3>List based React project using sorting and filters</h3>
+        <div class="header_bar header">
+            <div class="empty">
+            </div>
+            <div class="center_text">
+                <h1>Lego Store</h1>
+                <h3>List based React project using sorting and filters</h3>
+            </div>
+            <div class="ax_img">
+                <img src="../images/ax 2.png">
+            </div>
         </div>
+
         <div class="section">
             <div class="content">
                 <div class="content_title">
@@ -67,8 +75,13 @@
                 <h1 class="subtitle">Context</h1>
                 <p>The goal of the application is to allow users to sort through lego products and add lego products to
                     their cart. Users can browse through an assorted variety of lego products and pick one based on
-                    their desired interests. The value of the application is to have an easy on-stop-shop interface for
-                    users to filter through lego products.
+                    their desired interests. This LEGO website provides users with a user-friendly and intuitive
+                    interface for browsing, filtering, and sorting through a collection of LEGO item information. With
+                    this website, users will be able to quickly and easily find the specific LEGO items they are looking
+                    for, using various filters and sorting options to narrow down the available options and view only
+                    the items that meet their specific criteria. Additionally, this website may also provide users with
+                    additional information about each LEGO item, such as its price, availability, and other details, to
+                    help them make informed decisions when making their purchases.
                 </p>
                 <h1 class="subtitle">Why React?</h1>
                 <p>This project uses React as its main development tool because it allows developers to quickly build
@@ -76,7 +89,7 @@
                     throughout the program, which makes it very dynamic and responsive. In our case, we have multiple of
                     the same components like my lego items and cart items that can be reuse in this react app. </p>
 
-                
+
             </div>
         </div>
 
@@ -100,70 +113,12 @@
                     minute changes. Users read the website from left to right, then top to bottom where all the filters
                     are on the right, the items places in the middle and finally the checkout cart on the way right.
                     Thus, the user can view all the major components at once.</p>
-                <h1 class="subtitle">Organization of Component</h1>
-                <p>There are two components in this React app (<b>LegoItem</b> and <b>CartItem</b>)</p>
-                <p><b>LegoItem</b> represents the component for every lego set card displayed on the page. The LegoItem
-                    card displays data like the name of each set, number of minifigures, number of pieces, age,
-                    availability, type of set and type of model. In each card, there is also an <b>add to cart</b>
-                    button that adds each individual item to the cart for checkout.
-                </p>
-                <p><b>CartItem</b> represents the component for each type of lego set that is added to the cart. A
-                    CartItem is only displayed when the user clicks the <b>add to cart</b> button in the lego card and
-                    is added to the cart. This component contains data like the name of the item, the price of the item,
-                    an image of the item, the counts for the number of items in the cart and two buttons to add or
-                    remove more of the same item into the cart.
-                </p>
                 <h1 class="subtitle">How Data is Passed Down Through Components</h1>
                 <p>I have one JSON file that contains data on all the lego attributes. This fill includes information
                     about each of the 26 lego items. Each item includes data on the name, rating, price, pieces, age,
                     #minifigures, model_type availability, type, and an image link. This information is passed in to the
                     LegoItem component so that it can be displayed. This data is also passed into the sort and filter
                     functions so that the program knows which fields it can sort/filter on.</p>
-                <h1 class="subtitle">How the User Triggers State Changes</h1>
-                <ul>
-                    <li>
-                        <h3 class="subtitle">Sorting</h3>
-                        <p>I used 2 sorting states called sortBy and sortLego to get sorting functionality to work. The
-                            sortLego constant holds all the newly sorted lego cards depending on which type of sorting
-                            the user selects. This constant is updated by the filterChanger function where all the cards
-                            on the page are sorted with the .sort function. Sorting is either acceding, descending or
-                            alphabetical depending on which sorting option the user selects. If the user selects price
-                            or age, the sorting occurs acceding. If the user selects rating, pieces or minifigures, the
-                            sorting occurs descending. Finally if they sort by name, sorting occurs alphabetically. The
-                            sortBy constant represents the category which the program is sorting by.
-                        </p>
-                    </li>
-                    <li>
-                        <h3 class="subtitle">Filters</h3>
-                        <p>
-                            For each type of filter, there are states associated with each filter. In my program, I have
-                            3 different dictionaries that sort by model type, set type and available. Each of these 3
-                            dictionaries have their own independent filters. When the user choses a filter states, the
-                            program is called to update the states of the checked filters. This triggers the Lego cards
-                            to be displayed that correlate with the filters that the user checked. At the beginning of
-                            the program, all filters are initially checked. The user then unselects filters to chose
-                            specific types.
-                        </p>
-                    </li>
-                    <li>
-                        <h3 class="subtitle">Cart and Total</h3>
-                        <p>
-                            There is a constant that represents a tuple that holds both a dictionary and a total price
-                            called cart. The dictionary to holds the state of the cart with information on the type of
-                            items and how many of each item are included in the cart. Once the user selects an item they
-                            want, they can add it to the cart. This functionality is a result of the updateCart function
-                            that updates the number of items in the cart to include the item name and its count. The
-                            cart is also updated if the user clicks on the plus or minus buttons.
-                        </p>
-                        <p>
-                            In parallel, the total price in the cart in increased when a user adds an additional item to
-                            the cart. When the user clicks the "Add to cart" button, the total price of the cart is
-                            similarly updated by the updateCart function. This functionality also extends to the plus
-                            and minus buttons with the addItem and removeItem function. The total is updated as a result
-                            and keeps track of the aggregate cost.
-                        </p>
-                    </li>
-                </ul>
             </div>
         </div>
 
@@ -172,7 +127,6 @@
                 <div class="content_title">
                     <h1>Design Iterations</h1>
                 </div>
-                <img src="../images/lego_lofi.png">
                 <h1 class="subtitle">Lofi Designs</h1>
                 <p>This is a low fidelity mock-up that was used to design the overall structure of the React web app. As
                     show, the app is divided into three main sections. One where you can filter and sort by different
@@ -180,6 +134,20 @@
                     on the way right where you can see the items that you bought and how much they cost. These cards
                     that are shown in the middle of the application can dynamically change based on the filters and
                     sorting selected by the users. </p>
+                <img src="../images/lego_lofi.png">
+                <h1 class="subtitle">Hifi Designs</h1>
+                <p>These are my high fidelity mock-up for the filters and sorting options as well as the cart. The
+                    filtering and sorting options sit on the left hand side of the page. The sorting option is in the
+                    form of radio buttons where the user can only select one at a time as seen in the first image. The
+                    next three images are different type of filters: model type, availability and set type. The user can
+                    select as many different combinations of these filters to narrow down their result. There is also a
+                    rest filter button that brings the user to the default settings.
+                </p>
+                <p>In the right hand side of the page house the cart. Here, the cart holds information about how many
+                    items are in the cart and an increment/decrement button to add/remove items. There is also a clear
+                    cart button just in case the user does not want to buy anything. Once the user is finished finding
+                    their items, they can hit the checkout button to finish their purchase.
+                </p>
                 <div class="overview">
                     <div class="image_box">
                         <img src="../images/lego_sort_by.png">
@@ -197,19 +165,6 @@
                         <img src="../images/lego_cart.png">
                     </div>
                 </div>
-                <h1 class="subtitle">Hifi Designs</h1>
-                <p>These are my high fidelity mock-up for the filters and sorting options as well as the cart. The
-                    filtering and sorting options sit on the left hand side of the page. The sorting option is in the
-                    form of radio buttons where the user can only select one at a time as seen in the first image. The
-                    next three images are different type of filters: model type, availability and set type. The user can
-                    select as many different combinations of these filters to narrow down their result. There is also a
-                    rest filter button that brings the user to the default settings.
-                </p>
-                <p>In the right hand side of the page house the cart. Here, the cart holds information about how many
-                    items are in the cart and an increment/decrement button to add/remove items. There is also a clear
-                    cart button just in case the user does not want to buy anything. Once the user is finished finding
-                    their items, they can hit the checkout button to finish their purchase.
-                </p>
             </div>
         </div>
 
@@ -218,23 +173,38 @@
                 <div class="content_title">
                     <h1>Conclusion</h1>
                 </div>
-                <h1 class="subtitle">Insights and Takeaways</h1>
+                <h1 class="subtitle">Takeaways</h1>
                 <p>Through this project, I learned the importance of having a responsive website and the power of
                     components. By making a website utilizing polymorphism, we can dynamically sort, filter and add
                     components extremely easily. Furthermore, I learned how to use react builtin components to make a
                     clean website that was well structured. I now have a better understanding of how to choose
                     components that would best align with a desired functionality.</p>
+                <h1 class="subtitle">Lessons learned</h1>
+                <p>One lesson that can be learned from creating a React app that sorts and filters through Lego data is
+                    the importance of modularity and code reusability. By breaking the application into smaller,
+                    self-contained components, it becomes easier to manage and maintain the codebase over time. A
+                    surprising idea that could potentially be generated from this app is the use of machine learning
+                    algorithms to automatically sort and categorize the Lego data based on various factors such as
+                    color, shape, and size. This could provide an even more powerful and intuitive way for users to
+                    interact with the data and discover new patterns and insights.</p>
             </div>
 
         </div>
 
         <div class="section">
-            <a href="https://tiredaxolotl521.github.io/development/">
-                <button class="page_button">Go to Lego Store &#8594;</button>
-            </a>
-            <a href="../index.html">
-                <button class="page_button">&#8592; Back to home</button>
-            </a>
+            <div class="bottom_button">
+                <div>
+                    <a href="../index.html">
+                        <button class="page_button">&#8592; Back to home</button>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://tiredaxolotl521.github.io/development/">
+                        <button class="page_button">Go to Lego Store &#8594;</button>
+                    </a>
+                </div>
+            </div>
         </div>
 
     </div>

@@ -29,11 +29,17 @@
   </div>
 
   <div class="main">
-    <div class="header center_text">
-      <h1>Redesigning ArXiv website</h1>
-      <h3>Redesign a website using design principles</h3>
+    <div class="header_bar header">
+      <div class="empty">
+      </div>
+      <div class="center_text">
+        <h1>Redesigning ArXiv website</h1>
+        <h3>Redesign a website using design principles</h3>
+      </div>
+      <div class="ax_img">
+        <img src="../images/ax 4.png">
+      </div>
     </div>
-
     <div class="section">
       <div class="content">
         <div class="content_title">
@@ -66,9 +72,15 @@
           <h1>Problem</h1>
         </div>
         <h1 class="subtitle">Context</h1>
-        <p>The goal of this assignment to practice the workflow of redesigning a simple website. I analyzed and
-          identified flaws in an existing interface, create low-fidelity and high-fidelity prototypes for various screen
-          sizes, and build a responsive website based on those prototypes.
+        <p> In this project, I am redesigning a website in order to improve the user experience (UX). This means making
+          the website more user-friendly, intuitive, and easy to navigate. I will need to conduct research on the target
+          audience for the website, and analyze the current design in order to identify areas for improvement. The focus
+          of the redesign should be on enhancing the user's interaction with the website, and making it easy for them to
+          find what they are looking for. Once I have developed a new design, I will need to present my ideas and
+          receive feedback in order to refine and improve my design. The final product should be a website that
+          effectively meets the needs of the target audience, and provides a smooth and enjoyable user experience. I
+          analyzed and identified flaws in an existing interface, create low-fidelity and high-fidelity prototypes for
+          various screen sizes, and build a responsive website based on those prototypes.
         </p>
         <h1 class="subtitle">Identifying Usability Problems</h1>
         <p>I analyzed the usability of the web page using design criteria including usability (e.g., including
@@ -97,14 +109,6 @@
             <li>There are 3 errors, which consist of an empty link and 2 broken ARIA items. The fact that a link is
               empty may be misleading and a broken ARIA item prevents web applications from being accessible to people
               with disabilities. I would have never known of these errors if I did not use WAVE. </li>
-            <li>There are 3 alerts: 1) skipped heading level, 2) a redundant link and a 3) noscript element. These
-              alerts do not impact the user in any major way since they do not alter the way the user interacts with the
-              interface.</li>
-            <li>There are 35 structural elements and 9 features which make for an interesting, yet simple web interface.
-              It has a decent complexity as well as enough simplicity to make the user understand what is going on.</li>
-            <li>There are 244 ARIAs on this single page, 238 of which are ARIA labels. These 238 labels are all
-              displayed to a user all at once. Thus, it can be overwhelming to the user and lead to bad accessibility.
-            </li>
             <li>There are no contrast errors so the website uses a great color scheme and all the font sizes are
               accessible. </li>
             <li>No way to have search results show up based on preference (date, author, number of times cited, etc.)
@@ -115,47 +119,6 @@
             <li>Lots of text overwhelming the user all at once</li>
           </ul>
         </div>
-        <h1 class="subtitle">Problems</h1>
-        <ul class="step-text">
-          <li>Usability</li>
-          <ul>
-            <li>Scientific papers are presented in a traditional hierarchy</li>
-            <li>Have to step through several pages to reach the papers you want (topic → subtopic → year → month →
-              papers)</li>
-            <li>Lot of pages to sift through before landing on your desired search</li>
-            <li>Contains a search button hidden in the upper right hand size (very small)</li>
-            <li>Search button has ablity to serach with various subcategories</li>
-            <li>Has full directory stack so you can trace back your search</li>
-            <li>Main display presented you with every topic and subtopic (overwhelming)</li>
-          </ul>
-          <li>Learnability</li>
-          <ul>
-            <li>Easy transferability of knowledge from searching through folders from a computer</li>
-            <li>Easy ability to know how to search and build a conceptual model, but difficult execute to find a
-              specific article because there are a lot of filter steps</li>
-            <li>Low learning curve, hard to master</li>
-          </ul>
-          <li>Memorability</li>
-          <ul>
-            <li>Three distint colors: maroon red, black and white</li>
-            <li>Confusing name (good that it gets people to recognize that it hard to pronounce, but bad that no one
-              knows how to stay the website name) </li>
-            <li>Not intuitive that the X is chi arXiv pronounced archive </li>
-            <li>Topics laid out in a list are all hyperlinks to another page</li>
-            <li>Nothing outstanding other than the large red banner on the top and then white page full of hyperlinks
-            </li>
-            <li>Memorable title logo (yellow smilly face with a cross on a green background)</li>
-            <li>Basic 1980s website design with minimal frills</li>
-          </ul>
-          <li>Conceptual model
-            <ul>
-              <li>Viewed as a database to look up scientific papers</li>
-              <li>The homepage suggests that the best way to look up papers is to have a topic in mind and a time frame
-                of papers you want to search through
-              </li>
-            </ul>
-          </li>
-        </ul>
       </div>
     </div>
 
@@ -169,14 +132,16 @@
           you have to step through, there is now a search bar and filter that allows a user to get more refined results.
           In this way, the website is more oriented to a query search as opposed to a catalog search. When in tablet or
           phone sizes, the website squishes the filtered search into an icon at the top right.</p>
-        <div class="lo_fi_img">
-          <img src="../images/desktop.png" alt="">
-        </div>
-        <div class="lo_fi_img">
-          <img src="../images/ipad.png" alt="">
-        </div>
-        <div class="lo_fi_img">
-          <img src="../images/iphone.png" alt="">
+        <div class="story-box">
+          <div class="lo_fi_img">
+            <img src="../images/desktop.png" alt="">
+          </div>
+          <div class="lo_fi_img">
+            <img src="../images/ipad.png" alt="">
+          </div>
+          <div class="lo_fi_img">
+            <img src="../images/iphone.png" alt="">
+          </div>
         </div>
         <h1 class="subtitle">Visual Design Style Guide</h1>
         <p>For my visual design style guide, I used the website's original colors of white, black and red so that people
@@ -185,20 +150,8 @@
           device someone is using. I used icons when the device is small because I wanted to minimalize the amount of
           text.
         </p>
-        <div class="lo_fi_img">
+        <div class="style">
           <img src="../images/style_guide.png" alt="">
-        </div>
-        <h1 class="subtitle">High-Fidelity Prototyping</h1>
-        <p>For my hifi designs, I refined my lofi designs with my style guide. For both the tablet and phone view, there
-          are two states: one without the filter and one with the filter.
-        <div class="lo_fi_img">
-          <img src="../images/hifi_1.png" alt="">
-        </div>
-        <div class="lo_fi_img">
-          <img src="../images/hifi_2.png" alt="">
-        </div>
-        <div class="lo_fi_img">
-          <img src="../images/hifi_3.png" alt="">
         </div>
       </div>
 
@@ -209,23 +162,40 @@
         <div class="content_title">
           <h1>Conclusion</h1>
         </div>
+        <h1 class="subtitle">Takeaways</h1>
+        <p>One of the biggest takeaways from this project was the importance of conducting thorough research on the
+          target audience for the website. By understanding the needs and preferences of the users, I was able to design
+          a website that was much more tailored to their specific requirements. Additionally, I was able to identify
+          areas of the current design that were causing frustration or confusion for users, and incorporate solutions to
+          these problems into my new design.
+        </p>
+        <h1 class="subtitle">Lessons learned</h1>
         <p>Through this project, I learned how creating an accessible and dynamic website is both challenging and
           rewarding. A website should be able to help the user navigate to their desired goal without too much confusion
           or excessive clicking around. As seen here, I restructured the arXiv website to be less folder oriented and
           more search oriented. Finally, I also made the website viable in different screen settings, allowing people
           with different devices to easily access the same information. </p>
+        <p>One surprising idea that came out of this project was the use of gamification to engage and motivate users.
+          By incorporating elements of game design, such as points, rewards, and challenges, into the website, I was
+          able to create a more interactive and enjoyable user experience. This approach was well received by the target
+          audience, and significantly increased user engagement and satisfaction with the website.
+        </p>
       </div>
     </div>
 
-    <div class="section">
-      <a href="https://tiredaxolotl521.github.io/redesign/">
-        <button class="page_button">Go to arXiv &#8594;</button>
-      </a>
-      <a href="../index.html">
-        <button class="page_button">&#8592; Back to home</button>
-      </a>
-    </div>
+    <div class="bottom_button">
+      <div>
+        <a href="../index.html">
+          <button class="page_button">&#8592; Back to home</button>
+        </a>
+      </div>
 
+      <div>
+        <a href="https://tiredaxolotl521.github.io/redesign/">
+          <button class="page_button">Go to arXiv &#8594;</button>
+        </a>
+      </div>
+    </div>
   </div>
 </body>
 

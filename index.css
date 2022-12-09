@@ -5,7 +5,7 @@
     --pink: #eb9892;
     --text_color: #686868;
     --light_pink: #fbc4cc;
-    --blue: #5f92a5;
+    --blue: #57adcc;
 }
 
 html {
@@ -18,7 +18,8 @@ body {
     display: flex;
     position: relative;
     color: var(--text_color);
-    background-color: #ececec;
+    /* background-color: #ececec; */
+    background-image: url('images/bubbles.jpg');
 }
 
 .side-nav {
@@ -96,11 +97,11 @@ body {
 }
 
 .header {
-    background-color: var(--blue);
+    background-color: var(--light_pink);
     width: 100%;
     min-height: 200px;
     text-align: center;
-    color: #ffffff;
+    color: #000000;
 }
 
 .header h1 {
@@ -120,7 +121,20 @@ body {
     text-align: center;
     width: 600px;
     width: calc(100% - 250px);
-    margin: 100px 0 2vw 0;
+    margin: 2vw 0 2vw 0;
+}
+
+.static_content{
+    color: black;
+    background-color: white;
+    width: 100%;
+    padding: 2vw 5vw 2vw 5vw;
+    transition: 0.5s;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 5%);
+    border-radius: 10px;
+}
+.static_content img {
+    width: 100%;
 }
 
 .content {
@@ -263,7 +277,7 @@ body {
     border: none;
     border-radius: 10px;
     box-shadow: 0 5px #999;
-    margin-bottom: 2vw;
+    margin: 2vw;
 }
 
 .page_img {
@@ -363,7 +377,13 @@ body {
 .lo_fi_img {
     align-items: center;
     margin: auto;
-    width: 40vw;
+    width: 20vw;
+    margin-bottom: 3vw;
+}
+.style{
+    align-items: center;
+    margin: auto;
+    width: 30vw;
     margin-bottom: 3vw;
 }
 
@@ -398,7 +418,32 @@ body {
     height: 1000px;
 }
 
+.bottom_button{
+    display: flex;
+    justify-content: center;
+}
+.empty{
+    width: 15vw;
+}
 
+.ax_img{
+    width: 20vw;
+    margin-left: 2vw;
+}
+
+.ax_img_small{
+    position: absolute;
+    transform: rotate(-120deg);
+    width: 100px;
+}
+
+.header_bar{
+    display: flex;
+    justify-content: space-between;
+}
+.crit_div{
+    width: 30vw;
+}
 
 @media only screen and (max-width: 900px) {
     .main-nav {
@@ -436,6 +481,9 @@ body {
     .content {
         width: calc(100% - 7rem);
     }
+    .static_content{
+        width: calc(100% - 7rem);
+    }
 
     .menu-icon-wrapper {
         display: block;
@@ -443,6 +491,10 @@ body {
 
     .center_text {
         padding-top: 100px;
+    }
+
+    .ax_img{
+        display: None;
     }
 }
 
